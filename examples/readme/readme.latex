@@ -1,0 +1,25 @@
+\documentclass[a4paper]{article}
+\usepackage{minted}
+
+\usepackage[xetex]{graphicx}
+\usepackage{fontspec,xunicode}
+\defaultfontfeatures{Mapping=tex-text,Scale=MatchLowercase}
+\setmainfont{DejaVu Serif}
+\setsansfont{DejaVu Sans}
+\setmonofont{DejaVu Sans Mono}
+
+%opening
+\title{mdlatex Readme}
+\author{nilsding}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+This is the readme file of this project.  You should read it.
+\end{abstract}
+
+\input{readme_md.latex}
+
+\end{document}
