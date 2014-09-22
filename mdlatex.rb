@@ -4,6 +4,8 @@
 require "redcarpet"
 require File.expand_path "./render_latex", File.dirname(__FILE__)
 
+# a list of all Markdown extensions is available at
+# https://github.com/vmg/redcarpet#and-its-like-really-simple-to-use
 markdown = Redcarpet::Markdown.new(LaTeXRenderer, fenced_code_blocks: true)
 
 content = ""

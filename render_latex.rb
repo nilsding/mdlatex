@@ -50,10 +50,9 @@ class LaTeXRenderer < Redcarpet::Render::Base
     "\\begin{minted}{#{language}}\n#{code.gsub("\\", "\\\\")}\\end{minted}\n"
   end
 
-  # TODO: figure out what triple emphasis is
-#   def triple_emphasis(text)
-#     "\\emph{\\textbf{#{text}}}"
-#   end
+   def triple_emphasis(text)
+     "\\textbf{\\emph{#{text}}}" # ???
+   end
 
   def double_emphasis(text)
     "\\textbf{#{text}}"
@@ -62,7 +61,11 @@ class LaTeXRenderer < Redcarpet::Render::Base
   def emphasis(text)
     "\\emph{#{text}}"
   end
-
+  
+  def underline(text)
+    "\\underline{#{text}}"
+  end
+  
   def codespan(code)
     "\\texttt{#{code.gsub("_", "\\_")}}"
   end
