@@ -49,10 +49,14 @@ class LaTeXRenderer < Redcarpet::Render::Base
     language = "text" if language.strip.empty?
     "\\begin{minted}{#{language}}\n#{code.gsub("\\", "\\\\")}\\end{minted}\n"
   end
+  
+  def link(link, title, content)
+    "\\href{#{link}}{#{content.gsub("_", "\\_")}}"
+  end 
 
-   def triple_emphasis(text)
-     "\\textbf{\\emph{#{text}}}" # ???
-   end
+  def triple_emphasis(text)
+    "\\textbf{\\emph{#{text}}}" # ???
+  end
 
   def double_emphasis(text)
     "\\textbf{#{text}}"
