@@ -40,4 +40,3 @@ An example document with output is in the `examples` directory.
 There might be some unexpected behaviour (or even bugs!) in either the
 Markdown parser or the converter, so you definitely should check the output of
 the converter and probably edit it, too.
-
