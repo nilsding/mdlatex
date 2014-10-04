@@ -1,5 +1,7 @@
 # mdlatex
 
+[![build status](http://ci.rrerr.net/projects/1/status.png?ref=master)](http://ci.rrerr.net/projects/1?ref=master)
+
 mdlatex is a simple Markdown to LaTeX conversion tool.  It works by providing
 a new renderer class for [redcarpet](https://github.com/vmg/redcarpet).
 
