@@ -48,7 +48,7 @@ class LaTeXRenderer < Redcarpet::Render::Base
   end
 
   def block_code(code, language)
-    language = "text" if language.strip.empty?
+    language = "text" if language.nil?
     "\\begin{minted}{#{language}}\n#{code.gsub("\\", "\\\\")}\\end{minted}\n"
   end
   
