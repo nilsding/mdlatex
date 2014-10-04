@@ -18,6 +18,8 @@ class LaTeXRenderer < Redcarpet::Render::Base
       "\\subsection{#{title}}\n"
     when 3
       "\\subsubsection{#{title}}\n"
+    else
+      "% section level: #{level} -- #{title}\n"
     end
   end
 
