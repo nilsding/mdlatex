@@ -83,6 +83,18 @@ class LaTeXRenderer < Redcarpet::Render::Base
   def superscript(text)
     "$^{\\textrm{#{text}}}$"
   end
+  
+  def footnotes(content)
+    content
+  end
+  
+  def footnote_ref(number)
+    "\\footnotemark[#{number}]"
+  end
+  
+  def footnote_def(content, number)
+    "\\footnotetext[#{number}]{#{content}}"
+  end
 end
 
 # kate: indent-width 2

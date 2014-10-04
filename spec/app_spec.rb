@@ -92,6 +92,17 @@ That's all, folks!
 MD
     expect(rendered.scan(/(\\(sub){0,2}?section\{(.*)})/).length).to be(6)
   end
+  
+  it "should make footnotes" do
+    rendered = render_markdown <<-MD
+We all know what footnotes are, right?[^1]
+
+[^1]: Footnotes are these things.
+MD
+    expect(rendered).to include("\\footnotemark[1]")
+    expect(rendered).to include("\\footnotetext[1]")
+    expect(rendered).to include("Footnotes are these things.")
+  end
 end
 
 # kate: indent-width 2
