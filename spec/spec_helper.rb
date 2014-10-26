@@ -1,3 +1,5 @@
+require "simplecov"
+SimpleCov.start
 require "rspec"
 require "redcarpet"
 require File.expand_path "../render_latex.rb", File.dirname(__FILE__)
